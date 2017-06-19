@@ -123,7 +123,8 @@ public class CustomTextView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        // draw background
+        // draw background 
+        // test...
         mPaint.setColor(Color.YELLOW);
         canvas.drawRect(0, 0, getMeasuredWidth(), getMeasuredHeight(), mPaint);
 
