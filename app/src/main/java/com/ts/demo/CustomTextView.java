@@ -47,25 +47,14 @@ public class CustomTextView extends View {
     public CustomTextView(final Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         Log.w(TAG,"hello custom text view");
-        TypedArray a = context.obtainStyledAttributes(attrs,R.styleable.CustomTextView);
-        int n = a.getIndexCount();
-        for (int i = 0; i < n; i++) {
-            int attr = a.getIndex(i);
-            switch (attr) {
-                case R.styleable.CustomTextView_titleText:
-                    mTitleText = a.getString(attr);
-                    break;
-                case R.styleable.CustomTextView_titleTextColor:
-                    mTitleTextColor = a.getColor(attr, 0);
-                    break;
-                case R.styleable.CustomTextView_titleTextSize:
-                    mTitleTextSize = a.getDimensionPixelSize(attr, (int) TypedValue.applyDimension(
-                            TypedValue.COMPLEX_UNIT_SP, 16, getResources().getDisplayMetrics()));
-                    break;
-            }
-        }
+        TypedArray ta = context.obtainStyledAttributes(attrs,R.styleable.CustomTextView);
+        mTitleText = ta.getString(R.styleable.CustomTextView_titleText);
+        mTitleTextColor = ta.getColor(R.styleable.CustomTextView_titleTextColor, 0);
+        mTitleTextSize = ta.getDimensionPixelSize(R.styleable.CustomTextView_titleTextSize,
+                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 16,
+                        getResources().getDisplayMetrics()));
 
-        a.recycle();
+        ta.recycle();
 
         mPaint = new Paint();
         mPaint.setTextSize(mTitleTextSize);
