@@ -53,7 +53,6 @@ public class CustomTextView extends View {
         mTitleTextSize = ta.getDimensionPixelSize(R.styleable.CustomTextView_titleTextSize,
                 (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 16,
                         getResources().getDisplayMetrics()));
-
         ta.recycle();
 
         mPaint = new Paint();
