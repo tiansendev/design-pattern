@@ -14,7 +14,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initViews();
+
+        initData();
         
+    }
+
+    private void initData() {
+        Person.Builder builder = new Person.Builder();
+
+        Person person = builder.setAge(12)
+                .setName("ts")
+                .setHeight(23)
+                .setWeight(32)
+                .build();
+
     }
 
     private void initViews() {
