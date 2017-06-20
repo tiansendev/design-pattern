@@ -21,13 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         Person.Builder builder = new Person.Builder();
-
-        Person person = builder.setAge(12)
-                .setName("ts")
-                .setHeight(23)
-                .setWeight(32)
+        Person person = builder.age(12)
+                .name("ts")
+                .height(23)
+                .weight(32)
                 .build();
-
     }
 
     private void initViews() {

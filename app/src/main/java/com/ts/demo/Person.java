@@ -1,5 +1,7 @@
 package com.ts.demo;
 
+import android.os.Bundle;
+
 /**
  * Created by Administrator on 2017/6/19 0019.
  */
@@ -7,13 +9,13 @@ package com.ts.demo;
 public class Person {
     private String name;
     private int age;
-    private double height;
+    private double heigth;
     private double weight;
 
     private Person(Builder builder) {
-        this.age = builder.age;
         this.name = builder.name;
-        this.height = builder.height;
+        this.age = builder.age;
+        this.heigth = builder.height;
         this.weight = builder.weight;
     }
 
@@ -33,12 +35,12 @@ public class Person {
         this.age = age;
     }
 
-    public double getHeight() {
-        return height;
+    public double getHeigth() {
+        return heigth;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setHeigth(double heigth) {
+        this.heigth = heigth;
     }
 
     public double getWeight() {
@@ -49,28 +51,24 @@ public class Person {
         this.weight = weight;
     }
 
-    static class Builder{
+    static class Builder {
         private String name;
         private int age;
         private double height;
         private double weight;
-
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = name;
             return this;
         }
-
-        public Builder setAge(int age) {
+        public Builder age(int age) {
             this.age = age;
             return this;
         }
-
-        public Builder setHeight(double height) {
+        public Builder height(double height) {
             this.height = height;
             return this;
         }
-
-        public Builder setWeight(double weight) {
+        public Builder weight(double weight) {
             this.weight = weight;
             return this;
         }
