@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:gravity="center"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -17,5 +17,16 @@
         app:titleTextColor="@android:color/holo_orange_dark"
         app:titleTextSize="40sp"
         />
+
+    <android.support.v4.widget.Space
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_green_light"
+        android:textColor="@android:color/holo_red_dark"/>
 
 </LinearLayout>
