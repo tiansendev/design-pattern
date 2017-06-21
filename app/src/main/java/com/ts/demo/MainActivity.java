@@ -3,11 +3,12 @@ package com.ts.demo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.TextView;
 
 import com.ts.demo.observer.Observable;
 import com.ts.demo.observer.Observer;
 import com.ts.demo.observer.Wheater;
+
+import cn.jpush.android.api.JPushInterface;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,12 +19,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initJPush();
+
         initViews();
 
         initData();
 
         initObserver();
         
+    }
+
+    private void initJPush() {
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this.getApplicationContext());
     }
 
     private void initObserver() {
