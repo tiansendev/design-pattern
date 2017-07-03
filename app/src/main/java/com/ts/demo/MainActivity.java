@@ -10,6 +10,7 @@ import com.ts.demo.callbackDemo.CountDownTimer;
 import com.ts.demo.observer.Observable;
 import com.ts.demo.observer.Observer;
 import com.ts.demo.observer.Wheater;
+import com.ts.demo.rx.RxDemo;
 
 import cn.jpush.android.api.JPushInterface;
 
@@ -94,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
                 .height(23)
                 .weight(32)
                 .build();
+
+        RxDemo.testRx();
     }
 
     private void initViews() {

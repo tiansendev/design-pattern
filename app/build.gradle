@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "com.ts.demo"
-        minSdkVersion 24
+        minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -41,4 +41,19 @@ dependencies {
     compile 'cn.jiguang.sdk:jpush:3.0.5'  // 此处以JPush 3.0.5 版本为例。
     compile 'cn.jiguang.sdk:jcore:1.1.2'  // 此处以JCore 1.1.2 版本为例。
 //    compile 'com.getui:sdk:2.10.2.0'
+
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+// Because RxAndroid releases are few and far between, it is recommended you also
+// explicitly depend on RxJava's latest version for bug fixes and new features.
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+    compile 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
+
+    // If you want pre-written Activities and Fragments you can subclass as providers
+    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
 }
+
